@@ -2,10 +2,10 @@
 
 import React from "react";
 
-export default function Items({ todos, setItemsTodos }) {
+export default function Items({ todos, setTodos }) {
   const handleDelete = (index) => {
     const updatedTodos = todos.filter((_, i) => i !== index);
-    setItemsTodos(updatedTodos);
+    setTodos(updatedTodos);
   };
 
   return (
@@ -16,7 +16,6 @@ export default function Items({ todos, setItemsTodos }) {
           <li key={todo.id}>
             <h3>{todo.title}</h3>
             <button className="delete" onClick={() => handleDelete(index)}>
-            
             </button>
           </li>
         ))}

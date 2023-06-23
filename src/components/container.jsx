@@ -4,15 +4,14 @@ import Form from './Form';
 
 export default function Container() {
   const [todos, setTodos] = useState([]);
-  const [items, setItemsTodos] = useState([]);
 
 
   return (
     <div id="app">
       <h1>My Todo 🗒️</h1>
       <div className="container">
-        <Form  setFormTodos={setTodos} />
-        <Items todos={todos} setItemsTodos={setItemsTodos} />
+        <Form  setTodos={setTodos} />
+        <Items todos={todos} setTodos={setTodos} />
       </div>
     </div>
   );
